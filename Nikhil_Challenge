@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+LABEL maintainer="rnikhil7@outlook.com"
+
+# Install NGINX
+RUN apt-get update
+RUN apt-get -y install nginx
+
+# Remove default files we don't need
+RUN rm /usr/share/nginx/html/index.html
+RUN touch index.html
+RUN echo "Hello World" >> index.html
+RUN service nginx restart
+
+EXPOSE 80
+
