@@ -13,6 +13,6 @@ Approach 1 =>
 5. Run the image as a container and check for the Public IP (docker run )
 6. For making sure that the IP is up and running create a Runscope test which will check the output
 
-/usr/bin/wget "Public IP" --timeout 30 -O - 2>/dev/null | grep "Normal operation string" || echo "The site is down" | /usr/bin/mail -v -s "Site is down" rnikhil7@outlook.com
+/usr/bin/wget "Public IP" --timeout 30 -O - 2>/dev/null | grep "Normal operation string" || echo "The site is down" | /usr/bin/mail -v -s "Site is down" r7@outlook.com
 
 
